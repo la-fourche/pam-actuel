@@ -9,7 +9,7 @@ namespace Akeneo\Pim\Enrichment\Component\Product\Model\Projection;
  * @copyright 2019 Akeneo SAS (http://www.akeneo.com)
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
-final class ProductCompleteness
+final class ProductCompleteness implements Completeness
 {
     /** @var string */
     private $channelCode;
@@ -52,6 +52,11 @@ final class ProductCompleteness
     public function requiredCount(): int
     {
         return $this->requiredCount;
+    }
+
+    public function missingCount(): int
+    {
+        return count($this->missingAttributeCodes);
     }
 
     public function missingAttributeCodes(): array
