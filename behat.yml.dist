@@ -4,7 +4,7 @@ legacy:
             paths:
                 - tests/legacy/features
             filters:
-                tags: '@critical&&~@ce'
+                tags: '@critical&&~@ce&&~@skip&&~@skip-pef'
             contexts:
                 - Context\FeatureContext:
                     -
