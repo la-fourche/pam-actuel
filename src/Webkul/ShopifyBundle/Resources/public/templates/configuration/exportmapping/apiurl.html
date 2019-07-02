@@ -1,0 +1,23 @@
+<div class="AknFieldContainer" data-code="type">
+        <div class="AknFieldContainer-header">
+            <label for="type" class="AknFieldContainer-label control-label required">
+                <%- label %> <em><%- required %></em>
+            </label>
+        </div>
+        <div class="AknFieldContainer-inputContainer field-input">
+            <input id="field-5998674153572578" name="apiUrl" class="AknTextField" type = "text" value = "<%- apiUrl %>">
+        </div>
+            <!-- Validation Error block -->
+    <%  if(error) { %>
+        <div class="AknFieldContainer-footer">
+            <div class="AknFieldContainer-validationErrors validation-errors">
+                <div class="AknFieldContainer-validationError">
+                    <i class="icon-warning-sign"></i>
+                    <%- error %>
+                </div>
+            </div>
+        </div>
+    <% } %>
+    <!-- //Validation Error block -->
+    </div>
+    

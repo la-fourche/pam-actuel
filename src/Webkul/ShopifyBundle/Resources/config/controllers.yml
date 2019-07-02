@@ -1,0 +1,11 @@
+services:
+    webkul_shopify_connector.controller.rest.export_mapping:
+        class: Webkul\ShopifyBundle\Controller\Rest\ExportMappingController
+        arguments:
+            - '@pim_catalog.repository.category'
+            - '@pim_internal_api_serializer'
+            - '@pim_catalog.filter.chained'
+            - '@webkul_shopify.repository.credentials'
+            - '@doctrine.orm.entity_manager'
+
+

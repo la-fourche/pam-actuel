@@ -1,0 +1,12 @@
+parameters:
+    webkul_shopify_connector.repository.export_mapping.class: Webkul\ShopifyBundle\Repository\DataMappingRepository
+    webkul_shopify_connector.entity.export_mapping.class: Webkul\ShopifyBundle\Entity\DataMapping
+
+services:
+    webkul_shopify.repository.credentials:
+        class: '%webkul_shopify_connector.repository.export_mapping.class%'  
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - '%webkul_shopify_connector.entity.export_mapping.class%'
+     
+           
