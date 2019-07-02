@@ -1,0 +1,11 @@
+services:
+    Webkul\ShopifyBundle\Listener\ClassDefinationForCompatibility:
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+            # - { name: kernel.event_listener, event: console.command, method: createUserSystem }
+    
+    wk_commond_event.listener:  
+        class:  'Webkul\ShopifyBundle\Listener\ClassDefinationForCompatibility'          
+        tags:
+            - { name: kernel.event_listener, event: console.command, method: createUserSystem }
+                

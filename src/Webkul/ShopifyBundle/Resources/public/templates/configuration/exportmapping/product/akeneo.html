@@ -1,0 +1,32 @@
+
+<div class="AknFieldContainer product" data-code="akeneoProductId"   <%  if(type != 'product') { %> style="display: none" <% } %>>
+    <div class="AknFieldContainer-header">
+        <label for="akeneoProductId" class="AknFieldContainer-label control-label required">
+            <%- label %> <em><%- required %></em>
+        </label>
+    </div>
+
+    <!-- Select Field -->
+    <div class="AknFieldContainer-inputContainer field-input">
+            <select class="select2 select-field" name="akeneoProductSku" id="pim_enrich_entity_form_akeneoProductId" required>
+                <% _.each(productCodes, function(ProductCode) { %>
+                    <option value="<%- ProductCode %>" <% if ( ProductCode === akeneoProductSku){ %> selected = "selected"<% } %>><%- ProductCode %></option>
+                    <% }); %>
+            </select>
+    </div>
+    <!-- //Select Field -->
+    
+    <!-- Validation Error block -->
+    <%  if(error) { %>
+        <div class="AknFieldContainer-footer">
+            <div class="AknFieldContainer-validationErrors validation-errors">
+                <div class="AknFieldContainer-validationError">
+                    <i class="icon-warning-sign"></i>
+                    <%- error %>
+                </div>
+            </div>
+        </div>
+    <% } %>
+    <!-- //Validation Error block -->
+
+</div>

@@ -1,0 +1,73 @@
+services:
+    # connector service 
+    shopify.connector.service:
+        class: 'Webkul\ShopifyBundle\Services\ShopifyConnector'
+        arguments:
+            - '@service_container'
+            - '@doctrine.orm.entity_manager'
+
+    # api logger service to generate the api import / export logs
+    webkul_shopify_jobs.logger:
+        class: 'Webkul\ShopifyBundle\Logger\ApiLogger'
+        arguments:
+            - 'webkul_shopify'
+        calls:
+            - [pushHandler, ['@webkul_shopify_logger_handler']]
+    
+    webkul_shopify_logger_handler:
+        class: Monolog\Handler\StreamHandler
+        arguments: ['%kernel.logs_dir%/webkul_shopify_batch.%kernel.environment%.log', 'info']
+
+    # product import logger service to generate log for matched sku product 
+    webkul_shopify_jobs.import_matched.product.logger:
+        class: 'Webkul\ShopifyBundle\Logger\ApiLogger'
+        arguments:
+            - 'webkul_shopify'
+        calls:
+            - [pushHandler, ['@webkul_shopify_logger_import_matched_handler']]
+
+    webkul_shopify_logger_import_matched_handler:
+        class: Monolog\Handler\StreamHandler
+        arguments: ['%kernel.logs_dir%/webkul_shopify_import_matched_sku_product.%kernel.environment%.log', 'info'] 
+    
+    # product import logger service to generate log for unmatched sku product 
+    webkul_shopify_jobs.import_unmatched.product.logger:
+        class: 'Webkul\ShopifyBundle\Logger\ApiLogger'
+        arguments:
+            - 'webkul_shopify'
+        calls:
+            - [pushHandler, ['@webkul_shopify_logger_import_unmatched_handler']]
+
+    webkul_shopify_logger_import_unmatched_handler:
+        class: Monolog\Handler\StreamHandler
+        arguments: ['%kernel.logs_dir%/webkul_shopify_import_unmatched_sku_product.%kernel.environment%.log', 'info'] 
+    
+    
+    # formate the tags according to the mapping
+    webkul_shopify_tags_formatter:
+        class: Webkul\ShopifyBundle\Classes\DataFormatter\Export\TagsFormatter
+        arguments:
+            - '@shopify.connector.service'
+
+    # formate the product data according to mapping
+    webkul_shopify_product_data_formatter:
+        class: Webkul\ShopifyBundle\Classes\DataFormatter\Export\ProductDataFormatter
+        arguments:
+            - '@shopify.connector.service'
+
+    # image File controller to generate full image resolution image url
+    webkul.shopify_connector.controller.imagefile:
+        class: Webkul\ShopifyBundle\Controller\ImageFileController
+        arguments:
+            - '@akeneo_file_storage.file_storage.filesystem_provider'
+            - '@akeneo_file_storage.repository.file_info'
+            - ['catalogStorage']
+    
+    #datagrid for akeneo shopify connector
+    webkul-product-export-mapping-grid.datasource.credentails:
+        class: Webkul\ShopifyBundle\DataSource\CredentailsDatasource
+        arguments:
+            - '@webkul_shopify.repository.credentials'
+            - '@pim_datagrid.datasource.result_record.hydrator.default'
+        tags:
+            - { name: oro_datagrid.datasource, type: custom_datasource_credentials }

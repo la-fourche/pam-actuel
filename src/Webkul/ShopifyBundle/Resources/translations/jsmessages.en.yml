@@ -1,0 +1,119 @@
+batch_jobs.shopify_export.label: Shopify Export Job
+shopify.form.properties.shop_url.title: Shop Url
+shopify.form.properties.api_key.title: Api key
+shopify.form.properties.password.title: Api Password
+shopify.documentation: Documentation
+shopify.credentials.tab: Credentials
+shopify.exportsettings.tab:  Export Attribute Mappings
+shopify.importsettings.tab: Import Attribute Mappings
+shopify.othersettings.tab: Other Settings
+shopify.connector.title: Shopify Akeneo Connector
+page_title.webkul_shopify_connector_configuration: Shopify Connector
+shopify.defaults.inventory_location: Inventory Location
+shopify.defaults.inventory_cost: Cost per item
+# shopify.defaults.inventory_cost_message: Cost per item - How much it costs you for the product or variant. For example, if you resell a product, then you can enter the price that you paid the manufacturer, excluding taxes, shipping, or other costs. If you create the product yourself, then you can enter a value that is based on your labor and material costs.For each product that has a product cost entered, the margin (calculated as ([price - cost] / price) * 100) is shown on the product details page. For example, if your price is $50 and your cost is $30, then the margin (calculated as ([50 - 30] / 50) * 100) is 40%.If you’re on the Shopify plan or higher, then you can access reports to analyze your product costs and margins. You can also determine your cost of goods sold (COGS).Entering the cost per item is optional. If you choose to enter your costs, then it’s best to add the amounts to all of your existing products at the same time by using the bulk editor or a CSV import. By updating the information at the same time, you can get the most value out of your profit reports.Cost per item doesn't apply to gift card products.
+shopify.useas.name: Name
+shopify.useas.description: Description
+shopify.useas.vendor: Vendor
+shopify.useas.product_type: Product type
+shopify.useas.seo_title: Meta Title (SEO)
+shopify.useas.seo_description: Meta Description (SEO)
+shopify.useas.price: Price
+shopify.useas.compare_at_price: Compare Price
+shopify.useas.weight: Weight
+shopify.useas.quantity: Stock quantity
+shopify.useas.variant_name: Variant Name
+shopify.useas.tags.comma.separated: Tags(comma separated)
+shopify.useas.inventory_management: Inventory policy
+shopify.useas.allow_purchase_out_of_stock: Allow customers to purchase this product when it's out of stock
+
+shopify.field_label: Field in Shopify
+shopify.field_in_akeneo: Use value of this Attribute
+shopify.field_value: Use this fixed value
+shopify.export.view.jobs: View Export jobs
+
+
+shopify.connector: Shopify Connector
+shopify.useas.barcode: Barcode
+batch_jobs.shopify_export.category_export.label: Category/Collection Export
+batch_jobs.shopify_export.product_export.label: Product and Product Variants Export
+shopify.useas.taxable: Taxable (1/0)
+shopify.useas.requires_shipping: Requires shipping
+shopify.useas.fulfillment_service: Fulfillment Service (manual, gift_card or other)
+shopify.useas.handle: URL and handle
+shopify.override_credentials.text: Provide credentials below only if want to use different credentials from common credentials. Otherwise don't fill fields below.
+pim.grid.mass_action.quick_export.shopify: Shopify Export (All Attributes)
+batch_jobs.shopify_quick_export.product_export.label: Product and Variants Quick Export
+batch_jobs.shopify_category_export.label: Shopify Category only Export
+batch_jobs.shopify_category_export.category_export.label: Category Export
+batch_jobs.shopify_product_export.label: Shopify Product only export
+batch_jobs.shopify_product_export.product_export.label: Shopify Product export
+
+shopify.import.view.jobs: View Import jobs
+pim_enrich.form.job_instance.button.import.title: IMPORT NOW
+batch_jobs.shopify_import.category_import.label: Category Import
+batch_jobs.shopify_import.product_import.label: Product Import
+batch_jobs.shopify_import.product_model_import.label: Product Model Import
+batch_jobs.shopify_import.attribute_import.label: Attribute Import
+batch_jobs.shopify_import.attribute_option_import.label: Attribute Options Import
+batch_jobs.shopify_import.family_variant_import.label: Family Variant Import
+batch_jobs.shopify_import.import_product_model_descendants.label: Product Model Descendants
+batch_jobs.shopify_import.label: Shopify Import Product
+batch_jobs.shopify_quick_export.category_export.label: Category Export (of selected products)
+batch_jobs.shopify_import.label: Shopify Import Product
+pim_enrich.form.job_instance.tab.properties.inventory_location.title: Inventory Location
+pim_enrich.form.job_instance.tab.properties.searchsku.title: Search for Product before export (Prevent Duplicacy)
+job_execution.summary.Product already Exist: Product Already Exist
+webkul_shopify_connector.export_mapping.index.create_btn: create mapping
+webkul_shopify_connector.entity.export_mapping.selected: Selected Entity
+page_title.webkul_shopify_data_grid: Akeneo Shopify Mapping
+webkul_shopify_connector.export_mapping.index.title: Akeneo Shopify Connector Mapping
+mapping_message: If your Shopify setup already have products and categories then please map them with akeneo in order to prevent duplicate record creation.
+mapping: Map Product/Category
+webkul_shopify_connector.item.export_mapping: Akeneo Shopify Mapping
+webkul_shopify_connector.title: Create
+webkul_shopify_connector.form.configuration.export_mapping.properties.type: Mapping Type
+webkul_shopify_connector.form.configuration.export_mapping.properties.type.category: Category
+webkul_shopify_connector.form.configuration.export_mapping.properties.type.product: Product
+webkul_shopify_connector.form.configuration.export_mapping.properties.akeneo_category: Akeneo Category
+webkul_shopify_connector.form.configuration.export_mapping.properties.shopify_category: Shopify Category
+webkul_shopify_connector.form.configuration.export_mapping.properties.akeneo_apiUrl: API URL
+webkul_shopify_connector.form.configuration.export_mapping.properties.shopify_product: Shopify Product
+webkul_shopify_connector.form.configuration.export_mapping.properties.akeneo_product: Akeneo Product
+confirmation.remove.datamapping: Are you Sure to Delete?
+flash.datamapping.removed: Data Mapping Deleted Successfully
+webkul_shopify_connector.mass_action.delete.confirm_content: Are you Sure to Delete Mappings?
+pim_datagrid.mass_action.delete.label: delete mappings
+webkul_shopify_connector.mass_action.delete.success: Mappings Deleted Successfully
+webkul_shopify.product.grid.export_mappings.columns.code: Akeneo Entity Code
+#data mapping
+batch_jobs.shopify_import_data_mapping.delete_mapping.label : Delete Products Mapping
+batch_jobs.shopify_import_data_mapping.product_import.label: Import Products Mapping
+batch_jobs.shopify_import_data_mapping.label: Delete / Reimport Product Data Mapping
+
+
+pim_enrich.entity.save.label: Save
+pim_enrich.form.required: (required)
+
+pim_enrich.entity.credentials.info.update_successful: Credential Update Successful
+pim_enrich.entity.credentials.info.update_failed: Credential Update Failed
+pim_enrich.entity.credentials.info.field_not_ready: Credential Field Not Ready
+pim_datagrid.mass_action.delete.label : Delete
+pim.grid.mass_action.delete: Delete
+pim_datagrid.mass_action.delete.confirm_title: Confirm
+pim_enrich.form.required: (required)
+pim_enrich.export.product.filter.currency.title: Currency
+
+
+pim_enrich.entity.save.label: Save
+pim_enrich.form.job_instance.button.edit.title: Edit
+pim_enrich.form.job_instance.button.export.title: Export Now
+pim_enrich.form.job_instance.subsection.last_executions: Last Executions
+pim_enrich.form.job_instance.tab.properties.title: Properties
+pim_enrich.form.job_instance.tab.properties.code.title: Code
+pim_enrich.form.job_instance.tab.properties.label.title: Label
+pim_enrich.form.job_instance.tab.content.title: Content
+pim_enrich.export.product.filter.locales.title: Locales
+pim_enrich.form.job_instance.tab.history.title: History
+
+

@@ -1,0 +1,30 @@
+<div class="AknFieldContainer product" data-code="shopifyProductId"  <%  if(type != 'product') { %> style="display: none" <% } %>   >
+    <div class="AknFieldContainer-header">
+        <label for="shopifyProductId" class="AknFieldContainer-label control-label required">
+            <%- label %> <em><%- required %></em>
+        </label>
+    </div>
+    <!-- Select Field -->
+    <div class="AknFieldContainer-inputContainer field-input">
+        <select class="select2 select-field" name = "shopifyProductId"  id="pim_enrich_entity_form_shopifyProductId" required>
+            <% _.each(shopifyproducts, function(shopifyproduct) { %>
+                <option value="<%- shopifyproduct.id %>"  <% if(shopifyproduct.id == shopifyProductId) {%>selected="selected" <%}%> relatedId="<%- _.first(shopifyproduct.variants) ? _.first(shopifyproduct.variants).id : '' %>" ><%- shopifyproduct.title %><%- ' ' %>(<%- shopifyproduct.id %>)</option>
+            <% }); %> 
+        </select>
+    </div>
+    <!-- //Select Field -->
+
+    <!-- Validation Error block -->
+    <%  if(error) { %>
+        <div class="AknFieldContainer-footer">
+            <div class="AknFieldContainer-validationErrors validation-errors">
+                <div class="AknFieldContainer-validationError">
+                    <i class="icon-warning-sign"></i>
+                    <%- error %>
+                </div>
+            </div>
+        </div>
+    <% } %>
+    <!-- //Validation Error block -->
+</div>
+
