@@ -1,3 +1,9 @@
+shopify:
+    resource: "@ShopifyBundle/Resources/config/routing.yml"
+    prefix:   /
+
+# Akeneo
+
 akeneo_channel:
     resource: "@AkeneoChannelBundle/Resources/config/routing.yml"
     prefix:   /
