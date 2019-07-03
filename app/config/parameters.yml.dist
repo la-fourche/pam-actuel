@@ -1,4 +1,5 @@
 parameters:
+    installer_data:                      'LafourcheAppBundle:mydataset'
     database_driver:                      pdo_mysql
     database_host:                        localhost
     database_port:                        ~
