@@ -63,6 +63,10 @@ class ProductReader extends BaseReader implements \ItemReaderInterface,\Initiali
         $this->storer = $storer;
         $this->fileInfoRepository = $fileInfoRepository;
         $this->uploadDir = $uploadDir;
+
+        // Fix: file_get_contents on shopify cdn
+        // https://community.shopify.com/c/Shopify-APIs-SDKs/Friday-Update-to-CDN-403-Issue/td-p/456136
+        ini_set('user_agent', 'Mozilla/4.0 (compatible; MSIE 6.0)');
     }
 
     public function initialize()
