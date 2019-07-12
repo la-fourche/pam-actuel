@@ -1,3 +1,4 @@
 code;sort_order;label-en_US;label-fr_FR
-other;100;Other;Autre
 marketing;10;Marketing;Marketing
+logistics;20;Logistics;Logistique
+finance;30;Finances;Finance
