@@ -137,13 +137,13 @@ class PropertiesNormalizer implements NormalizerInterface
     /**
      * Normalize the values of the product
      *
-     * @param \ValueCollectionInterface $values
+     * @param mixed                    $values
      * @param string                   $format
      * @param array                    $context
      *
      * @return ArrayCollection
      */
-    private function normalizeValues(\ValueCollectionInterface $values, $format, array $context = [])
+    private function normalizeValues($values, $format, array $context = [])
     {
         foreach ($context['filter_types'] as $filterType) {
             $values = $this->filter->filterCollection($values, $filterType, $context);
