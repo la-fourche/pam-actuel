@@ -52,8 +52,9 @@ class ProductDataFormatter
         } else if(array_key_exists($field, $attributes)) {
             $value =  $attributes[$field];
         }
-        
-        if(is_string($value)) {
+
+        // Do not remove "_" for body_html
+        if(!in_array($name, $this->acceptsUnderscoreFieldsNames) && is_string($value)) {
             $value = str_replace('_', ' ', trim($value));            
         }
 
@@ -66,5 +67,7 @@ class ProductDataFormatter
         'metafields_global_title_tag' => 70,
     ];
 
-
+    protected $acceptsUnderscoreFieldsNames = [
+        'body_html',
+    ];
 }
