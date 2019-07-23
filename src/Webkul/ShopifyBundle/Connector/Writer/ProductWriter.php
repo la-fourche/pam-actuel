@@ -1126,6 +1126,8 @@ class ProductWriter extends BaseWriter implements \ItemWriterInterface
 
     /**
      * Update the quantity as per location
+     * Disabled for LF
+     *
      * @var $locationId
      * @var $inventoryItemId
      * @var $inventoryQuantity
@@ -1133,6 +1135,8 @@ class ProductWriter extends BaseWriter implements \ItemWriterInterface
      */
     protected function updateQuantity($locationId, $inventoryItemId, $inventoryQuantity) 
     {
+        return;
+
         $payload =  [
             "location_id" => $locationId,
             "inventory_item_id" => $inventoryItemId,
@@ -1323,7 +1327,7 @@ class ProductWriter extends BaseWriter implements \ItemWriterInterface
         'sku',
         'weight', 
         'inventory_management',
-        'inventory_quantity', 
+//        'inventory_quantity',
         'taxable',
         'requires_shipping',
         'inventory_policy',
