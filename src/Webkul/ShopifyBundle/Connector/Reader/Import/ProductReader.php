@@ -488,6 +488,7 @@ class ProductReader extends BaseReader implements \ItemReaderInterface,\Initiali
         'title', 
         'vendor',
         'product_type',
+        'published_at',
         'tags',
     ];
 

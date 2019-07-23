@@ -435,6 +435,16 @@ class ConfigurationController extends Controller
             'tooltip' => 'supported attributes types: text, textarea',            
             'multiselect' => false,
         ],
+        [
+             'name' => 'published_at',
+             'label' => 'shopify.useas.published_at',
+             'types' => [
+                 'pim_catalog_date',
+             ],
+             'mapping' => ['export', 'import'],
+             'default' => true,
+             'tooltip' => 'supported attributes types: date',
+        ],
         [ 
             'name' => 'price',
             'label' => 'shopify.useas.price',

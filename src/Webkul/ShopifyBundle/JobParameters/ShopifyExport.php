@@ -56,11 +56,12 @@ class ShopifyExport implements
                     'operator' => \Operators::GREATER_OR_EQUAL_THAN,
                     'value'    => 100,
                 ],
-                [
-                    'field'    => 'categories',
-                    'operator' => \Operators::IN_CHILDREN_LIST,
-                    'value'    => []
-                ]
+                // LF looks like this filter prevent exporting
+//                [
+//                    'field'    => 'categories',
+//                    'operator' => \Operators::IN_CHILDREN_LIST,
+//                    'value'    => []
+//                ]
             ],
             'structure' => [
                 'scope'   => $defaultChannelCode,
