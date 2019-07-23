@@ -152,6 +152,9 @@ class ProductWriter extends BaseWriter implements \ItemWriterInterface
                         $formattedData['product']['variants'][0]['id'] = $relatedId;
                     }
 
+                    // Unpublish product if no date for LF
+                    $formattedData['product']['published_at'] = $formattedData['product']['published_at'] ?: null;
+
                     $result = $this->connectorService->requestApiAction(
                                     self::ACTION_UPDATE, 
                                     $formattedData,
@@ -193,6 +196,8 @@ class ProductWriter extends BaseWriter implements \ItemWriterInterface
                         continue;
                     }
                 }
+
+                $formattedData['product']['published_at'] = $formattedData['product']['published_at'] ?: null;
                 
                 $result = $this->connectorService->requestApiAction(
                             self::ACTION_ADD, 
@@ -1311,6 +1316,7 @@ class ProductWriter extends BaseWriter implements \ItemWriterInterface
         'body_html',
         'handle',
         'title',
+        'published_at',
         // 'metafields_global_title_tag', 
         // 'metafields_global_description_tag',        
         'vendor',
