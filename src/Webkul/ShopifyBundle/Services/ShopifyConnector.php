@@ -351,6 +351,10 @@ public function addOrUpdateMapping($mapping, $code, $entity, $externalId, $relat
         
         // Shopify has a limit of 1 call per second
         // sleep(1);
+
+        // LF avoiding the limit
+        usleep(200000);
+
         if(!empty($settings['enable_response_log']) && $settings['enable_response_log']== "true") {
             $logger = $this->container->get('webkul_shopify_jobs.logger');
             $logger->info("Response: " . json_encode($response));
