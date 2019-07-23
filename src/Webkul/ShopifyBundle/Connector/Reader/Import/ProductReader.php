@@ -498,7 +498,7 @@ class ProductReader extends BaseReader implements \ItemReaderInterface,\Initiali
         'sku',
         'weight', 
         'inventory_management',
-        'inventory_quantity', 
+//        'inventory_quantity',
         'taxable',
         'requires_shipping',
         'inventory_policy',

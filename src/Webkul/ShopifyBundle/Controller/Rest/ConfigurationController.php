@@ -457,16 +457,16 @@ class ConfigurationController extends Controller
             'default' => true,
             'tooltip' => 'supported attributes types: number, metric',
         ],
-        [ 
-            'name' => 'inventory_quantity',
-            'label' => 'shopify.useas.quantity',
-            'types' => [
-                'pim_catalog_number',
-            ],
-            'mapping' => ['export', 'import'],
-            'default' => true,
-            'tooltip' => 'supported attributes types: number',
-        ],
+//        [
+//            'name' => 'inventory_quantity',
+//            'label' => 'shopify.useas.quantity',
+//            'types' => [
+//                'pim_catalog_number',
+//            ],
+//            'mapping' => ['export', 'import'],
+//            'default' => true,
+//            'tooltip' => 'supported attributes types: number',
+//        ],
         [ 
             'name' => 'inventory_management',
             'label' => 'shopify.useas.inventory_management',
