@@ -194,9 +194,9 @@ extensions:
                 -
                     field: updated
                     view: akeneo-product-updated-filter
-                -
-                    field: categories
-                    view: akeneo-product-category-filter
+                #-
+                #    field: categories
+                #    view: akeneo-product-category-filter
 
     pim-job-instance-shopify-export-edit-content-default-attribute-filters:
         module: pim/job/product/edit/content/data/default-attribute-filters
