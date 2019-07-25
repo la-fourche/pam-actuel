@@ -192,7 +192,16 @@ class ProductReader extends BaseReader implements \ItemReaderInterface,\Initiali
                     $results = $this->connectorService->getAttributeByLocaleScope($field);
                     $localizable = isset($results[0]['localizable']) ? $results[0]['localizable'] : 0;
                     $scopable = isset($results[0]['scopable']) ? $results[0]['scopable'] : 0 ;
-                    if(in_array($name, $this->productIndexes)) {
+
+                    if ('published_at' === $name) {
+                        $formated['values'][$field] = [
+                            array(
+                                'locale' => $localizable ? $this->locale : null,
+                                'scope' => $scopable ? $this->scope : null,
+                                'data'=> isset($product[$name]) ? $product[$name] : null
+                            )
+                        ];
+                    } else if(in_array($name, $this->productIndexes)) {
                         $formated['values'][$field] = [
                             array(
                                 'locale' => $localizable ? $this->locale : null,
