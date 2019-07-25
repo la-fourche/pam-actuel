@@ -115,6 +115,21 @@ jobs:
             filePathProductModel: /tmp/2_product_models_export_grid_context_%locale%_%scope%_%datetime%.xlsx
             linesPerFile: 10000
             with_media:   true
+    shopify_product_export:
+        connector: Shopify Connector
+        alias:     shopify_product_export
+        label:     Shopify Products Export
+        type:      export
+        configuration:
+            delimiter:  ;
+            enclosure:  '"'
+            withHeader: true
+            decimalSeparator: .
+            filters:
+                structure:
+                    scope: ecommerce
+            linesPerFile: 10000
+            with_media:   true
     compute_product_models_descendants:
         connector: internal
         alias:     compute_product_models_descendants
