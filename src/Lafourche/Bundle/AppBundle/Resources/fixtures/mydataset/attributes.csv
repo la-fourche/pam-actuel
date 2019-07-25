@@ -38,3 +38,4 @@ metafields_global_title_tag;metafields_global_title_tag;metafields_global_title_
 metafields_global_description_tag;metafields_global_description_tag;metafields_global_description_tag;Meta description;;;;;;;;marketing;0;;;;;;;;;0;28;pim_catalog_text;0;1;;;
 published_at;published_at;published_at;Publié le;;;;;;;;marketing;0;;;;;;;;;0;38;pim_catalog_date;0;1;;;
 inventory_quantity;inventory_quantity;inventory_quantity;Quantité;;;;;;0;;logistics;0;;;;;0;;;;0;39;pim_catalog_number;0;1;;;
+total_weight;total_weight;total_weight;Poids total;;;;;;1;KILOGRAM;logistics;0;;;Weight;;0;;;;0;40;pim_catalog_metric;0;1;;;
